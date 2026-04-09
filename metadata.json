@@ -1,0 +1,7 @@
+{
+  "name": "INSPEÇÃO LANDCROSS",
+  "description": "Plataforma de inspeção técnica especializada LANDCROSS.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
