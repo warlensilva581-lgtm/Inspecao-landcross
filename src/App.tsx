@@ -67,10 +67,10 @@ import {
 import { motion, AnimatePresence } from 'motion/react';
 import { jsPDF } from 'jspdf';
 import autoTable from 'jspdf-autotable';
-import { storageService } from './services/storageService';
+import { storageService } from './services/storage';
 import { PARTS_DATA, Part } from './partsData';
 import { MACHINE_DATABASE } from './machineData';
-import { supabase } from './lib/supabase';
+import { supabase } from './services/Supabase';
 import { DEFAULT_CATEGORY_GROUPS, EX1200_7_GROUPS, EX2600_7_GROUPS } from './constants/categoryGroups';
 
 // Safe localStorage helper to prevent QuotaExceededError crashes
