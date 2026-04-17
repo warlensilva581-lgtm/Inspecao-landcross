@@ -1,6 +1,6 @@
 {
-  "name": "INSPEÇÃO LANDCROSS",
-  "short_name": "LANDCROSS",
+  "name": "Landcros Inspeção",
+  "short_name": "Landcros",
   "description": "Sistema de Inspeção Técnica de Peças",
   "start_url": "/",
   "display": "standalone",

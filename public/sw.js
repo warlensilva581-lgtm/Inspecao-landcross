@@ -1,32 +1,25 @@
-const CACHE_NAME = 'landcros-v2'; // Mudei de v1 para v2 para forçar o navegador a notar a troca
+const CACHE_NAME = 'landcros-v1';
+const ASSETS_TO_CACHE = [
+  '/',
+  '/index.html',
+  '/src/main.tsx',
+  '/src/App.tsx',
+  '/src/index.css',
+  '/src/partsData.ts'
+];
 
 self.addEventListener('install', (event) => {
-  // Força o novo Service Worker a ativar imediatamente, sem esperar fechar abas
-  self.skipWaiting();
-});
-
-self.addEventListener('activate', (event) => {
-  // Limpa caches antigos para não ocupar espaço com lixo
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.filter((name) => name !== CACHE_NAME).map((name) => caches.delete(name))
-      );
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(ASSETS_TO_CACHE);
     })
   );
 });
 
 self.addEventListener('fetch', (event) => {
-  // Estratégia: Tenta a REDE primeiro. Se falhar (offline), usa o CACHE.
-  // Para navegação, se falhar, retorna o index.html (SPA fallback)
-  if (event.request.mode === 'navigate') {
-    event.respondWith(
-      fetch(event.request).catch(() => caches.match('/index.html'))
-    );
-    return;
-  }
-
   event.respondWith(
-    fetch(event.request).catch(() => caches.match(event.request))
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request);
+    })
   );
 });
