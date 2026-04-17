@@ -6,7 +6,7 @@
 
 This contains everything you need to run your app locally.
 
-View your app in AI Studio: https://ai.studio/apps/3706ec69-66d0-42ab-ba57-17d1e46e5cad
+View your app in AI Studio: https://ai.studio/apps/32c48431-7ca0-4750-b646-69c5473a3b10
 
 ## Run Locally
 
@@ -18,3 +18,5 @@ View your app in AI Studio: https://ai.studio/apps/3706ec69-66d0-42ab-ba57-17d1e
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+"Atualizando Vercell."

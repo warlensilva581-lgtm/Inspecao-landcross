@@ -1,6 +1,6 @@
 {
-  "name": "Remix: LANDCROS Connect Insight",
-  "description": "Plataforma de inspeção técnica e monitoramento para equipamentos Hitachi e LANDCROS.",
+  "name": "INSPEÇÃO LANDCROSS",
+  "description": "Plataforma de inspeção técnica especializada LANDCROSS.",
   "requestFramePermissions": [
     "camera"
   ]
