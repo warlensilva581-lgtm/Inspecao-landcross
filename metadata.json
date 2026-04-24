@@ -1,6 +1,6 @@
 {
-  "name": "INSPEÇÃO LANDCROSS",
-  "description": "Plataforma de inspeção técnica especializada LANDCROSS.",
+  "name": "Landcros Connect Insight - Image Editor",
+  "description": "Ferramenta de catálogo de peças com comandos de manipular imagem: aumentar, diminuir, rotacionar e deslocar.",
   "requestFramePermissions": [
     "camera"
   ]
